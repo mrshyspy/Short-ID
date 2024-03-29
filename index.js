@@ -21,6 +21,6 @@ app.use(cookieParser());
 app.use("/url", authenticateUser,  urlRouter);
 app.use("/" , staticRouter);
 
-app.listen(8000, () => {
-    console.log("server is working");
+app.listen(8000, (req) => {
+    res.render("home")
 })
